@@ -92,10 +92,6 @@ function onWindowResize() {
 function animate() {
     requestAnimationFrame(animate)
      
-    
-
-    console.log(figure1.rotation.x)
-    console.log(figure1.rotation.y)
     if(figure1.rotation.x<Math.PI*2){
         figure1.rotation.x += 0.002
         figure1.rotation.y += 0.002
