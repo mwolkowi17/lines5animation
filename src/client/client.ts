@@ -1,5 +1,4 @@
 import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { lineform } from './lineclass';
 import { CSS2DRenderer, CSS2DObject } from 'three/examples/jsm/renderers/CSS2DRenderer.js';
 import TWEEN from '@tweenjs/tween.js'
@@ -39,16 +38,16 @@ figure1.add(line6.main)
 
 scene.add(figure1)
 
-const Label = new CSS2DObject(LabelDiv);
+const Label = new CSS2DObject(LabelDiv.main);
 Label.position.set(-7.5, 0, 0);
 
-const Label4 = new CSS2DObject(LabelDiv4);
+const Label4 = new CSS2DObject(LabelDiv4.main);
 Label4.position.set(0, 20, 3);
 
-const Label6 = new CSS2DObject(LabelDiv6);
+const Label6 = new CSS2DObject(LabelDiv6.main);
 Label6.position.set(10, 0, 0);
 
-const Label7 = new CSS2DObject(LabelDiv7);
+const Label7 = new CSS2DObject(LabelDiv7.main);
 Label7.position.set(0, 0, 10);
 
 figure1.add(Label);
