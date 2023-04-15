@@ -91,16 +91,26 @@ function onWindowResize() {
 
 function animate() {
     requestAnimationFrame(animate)
+     
+    
 
-    figure1.rotation.x += 0.002
-    figure1.rotation.y += 0.002
+    console.log(figure1.rotation.x)
+    console.log(figure1.rotation.y)
+    if(figure1.rotation.x<Math.PI*2){
+        figure1.rotation.x += 0.002
+        figure1.rotation.y += 0.002
+    }else{
+        figure1.rotation.x=0
+        figure1.rotation.y=0
+    }
+    
     line1.main.geometry.attributes.position.needsUpdate = true;
     line2.main.geometry.attributes.position.needsUpdate = true;
     line3.main.geometry.attributes.position.needsUpdate = true;
     line4.main.geometry.attributes.position.needsUpdate = true;
     line5.main.geometry.attributes.position.needsUpdate = true;
     line6.main.geometry.attributes.position.needsUpdate = true;
-    
+
     //controls.update()
     TWEEN.update()
     render()
