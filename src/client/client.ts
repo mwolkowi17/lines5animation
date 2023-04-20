@@ -4,6 +4,8 @@ import { CSS2DRenderer, CSS2DObject } from 'three/examples/jsm/renderers/CSS2DRe
 import TWEEN from '@tweenjs/tween.js'
 import { LabelDiv, LabelDiv4, LabelDiv6, LabelDiv7 } from './divs';
 import { line1creation, line2creation, line3creation, line4creation, line5creation, line6creation } from './startanimation';
+import { labelclicked1, labelclicked4, labelclicked6, labelclicked7 } from './divs';
+import { b } from './divs'
 
 const scene = new THREE.Scene()
 
@@ -50,6 +52,8 @@ Label6.position.set(10, 0, 0);
 const Label7 = new CSS2DObject(LabelDiv7.main);
 Label7.position.set(0, 0, 10);
 
+
+
 figure1.add(Label);
 
 figure1.add(Label4);
@@ -88,17 +92,26 @@ function onWindowResize() {
     render()
 }
 
+let a = 0
+
 function animate() {
     requestAnimationFrame(animate)
-     
-    if(figure1.rotation.x<Math.PI*2){
+
+    if (figure1.rotation.x < Math.PI * 2) {
         figure1.rotation.x += 0.002
         figure1.rotation.y += 0.002
-    }else{
-        figure1.rotation.x=0
-        figure1.rotation.y=0
+    } else {
+        //place to add conditional
+        figure1.rotation.x = 0
+        // after Label1 clicked
+        //figure1.rotation.y=0+Math.PI*(11 / 18)
+        a = b;
+        console.log(a);
+        figure1.rotation.y = 0 + a
     }
-    
+
+    console.log(figure1.rotation.x)
+
     line1.main.geometry.attributes.position.needsUpdate = true;
     line2.main.geometry.attributes.position.needsUpdate = true;
     line3.main.geometry.attributes.position.needsUpdate = true;
