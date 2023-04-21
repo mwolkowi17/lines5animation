@@ -7,6 +7,8 @@ export let labelclicked1: boolean, labelclicked4: boolean, labelclicked6: boolea
 
 export let b = 0;
 
+export let d = 0;
+
 export const LabelDiv = new divsform('label', 'Element1')
 
 LabelDiv.main.addEventListener('pointerdown', () => {
@@ -25,6 +27,8 @@ LabelDiv4.main.addEventListener('pointerdown', () => {
 	new TWEEN.Tween(figure1.rotation)
 		.to({ x: Math.PI / 2, y: 0, z: 0 }, 1000)
 		.start()
+	d=  Math.PI/2
+	b=-1.5
 })
 
 
@@ -36,6 +40,7 @@ LabelDiv6.main.addEventListener('pointerdown', () => {
 	new TWEEN.Tween(figure1.rotation)
 		.to({ x: 0, y: -Math.PI * (11 / 18), z: 0 }, 1000)
 		.start()
+	b=-Math.PI * (11 / 18)
 })
 
 
@@ -46,6 +51,7 @@ LabelDiv7.main.addEventListener('pointerdown', () => {
 	new TWEEN.Tween(figure1.rotation)
 		.to({ x: 0, y: 0, z: 0 }, 1000)
 		.start()
+	b=0
 })
 
 

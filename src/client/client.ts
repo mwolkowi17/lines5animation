@@ -5,7 +5,7 @@ import TWEEN from '@tweenjs/tween.js'
 import { LabelDiv, LabelDiv4, LabelDiv6, LabelDiv7 } from './divs';
 import { line1creation, line2creation, line3creation, line4creation, line5creation, line6creation } from './startanimation';
 import { labelclicked1, labelclicked4, labelclicked6, labelclicked7 } from './divs';
-import { b } from './divs'
+import { b,d } from './divs'
 
 const scene = new THREE.Scene()
 
@@ -93,18 +93,21 @@ function onWindowResize() {
 }
 
 let a = 0
+let c = 0
 
 function animate() {
     requestAnimationFrame(animate)
-
-    if (figure1.rotation.x < Math.PI * 2) {
+    c=d
+    if (figure1.rotation.x < (Math.PI * 2))  {
+       
         figure1.rotation.x += 0.002
         figure1.rotation.y += 0.002
+        
+
+       
     } else {
-        //place to add conditional
         figure1.rotation.x = 0
-        // after Label1 clicked
-        //figure1.rotation.y=0+Math.PI*(11 / 18)
+        console.log(c)
         a = b;
         console.log(a);
         figure1.rotation.y = 0 + a
