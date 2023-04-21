@@ -28,7 +28,7 @@ LabelDiv4.main.addEventListener('pointerdown', () => {
 		.to({ x: Math.PI / 2, y: 0, z: 0 }, 1000)
 		.start()
 	d=  Math.PI/2
-	b=-1.5
+	b=-1.6
 })
 
 
