@@ -6,14 +6,14 @@ export class invoDiv {
     offButton: HTMLElement
     valvleDetails: HTMLElement
 
-    constructor() {
+    constructor(title:string) {
         this.main = document.createElement('div');
         //console.log(this.main);
 
         this.main.className = 'display';
         this.main.id = 'display1';
         this.main.style.backgroundColor = 'rgba(255,255,255,0.5)';
-        this.main.textContent = "Stairs in the park";
+        this.main.textContent = title;
         this.main.style.color = 'black'
         this.main.style.height = "520px";
         this.main.style.width = "400px";
