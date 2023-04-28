@@ -35,7 +35,7 @@ labelinfo1.offButton.addEventListener("click", function () {
 
 
 export const LabelDiv4 = new divsform('label', 'Element4')
-const labelinfo4 = new invoDiv("Label2")
+const labelinfo4 = new invoDiv("Label4")
 
 LabelDiv4.main.addEventListener('pointerdown', () => {
 	console.log('Element 4 clicked')
